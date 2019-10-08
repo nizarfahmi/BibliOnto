@@ -1,0 +1,1517 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.bibliography.com/ontologies/biblio.owl#"
+     xml:base="http://www.bibliography.com/ontologies/biblio.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:biblio="http://www.bibliography.com/ontologies/biblio.owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.bibliography.com/ontologies/biblio.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#hasAbstract -->
+
+    <owl:ObjectProperty rdf:about="http://www.bibliography.com/ontologies/biblio.owl#hasAbstract">
+        <owl:inverseOf rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#isAbstractOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Article"/>
+        <rdfs:range rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Abstract"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#hasAffiliation -->
+
+    <owl:ObjectProperty rdf:about="http://www.bibliography.com/ontologies/biblio.owl#hasAffiliation">
+        <owl:inverseOf rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#isAffiliationOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Author"/>
+        <rdfs:range rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Institution"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#hasArticle -->
+
+    <owl:ObjectProperty rdf:about="http://www.bibliography.com/ontologies/biblio.owl#hasArticle">
+        <owl:inverseOf rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#isArticleOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Volume"/>
+        <rdfs:range rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Article"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#hasAuthor -->
+
+    <owl:ObjectProperty rdf:about="http://www.bibliography.com/ontologies/biblio.owl#hasAuthor">
+        <owl:inverseOf rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#isAuthorOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Article"/>
+        <rdfs:range rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Author"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#hasDoi -->
+
+    <owl:ObjectProperty rdf:about="http://www.bibliography.com/ontologies/biblio.owl#hasDoi">
+        <owl:inverseOf rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#isDoiOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Article"/>
+        <rdfs:range rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#DOI"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#hasIssn -->
+
+    <owl:ObjectProperty rdf:about="http://www.bibliography.com/ontologies/biblio.owl#hasIssn">
+        <owl:inverseOf rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#isIssnOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Journal"/>
+        <rdfs:range rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#ISSN"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#hasKeywords -->
+
+    <owl:ObjectProperty rdf:about="http://www.bibliography.com/ontologies/biblio.owl#hasKeywords">
+        <owl:inverseOf rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#isKeywordOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Abstract"/>
+        <rdfs:range rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Keyword"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#hasPublisher -->
+
+    <owl:ObjectProperty rdf:about="http://www.bibliography.com/ontologies/biblio.owl#hasPublisher">
+        <owl:inverseOf rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#isPublisherOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Journal"/>
+        <rdfs:range rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#Publisher"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#hasUrl -->
+
+    <owl:ObjectProperty rdf:about="http://www.bibliography.com/ontologies/biblio.owl#hasUrl">
+        <owl:inverseOf rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#isUrlOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Article"/>
+        <rdfs:range rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#URL"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#hasVolume -->
+
+    <owl:ObjectProperty rdf:about="http://www.bibliography.com/ontologies/biblio.owl#hasVolume">
+        <owl:inverseOf rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#isVolumeOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Journal"/>
+        <rdfs:range rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Volume"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#hasYear -->
+
+    <owl:ObjectProperty rdf:about="http://www.bibliography.com/ontologies/biblio.owl#hasYear">
+        <owl:inverseOf rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#isYearOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Volume"/>
+        <rdfs:range rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Year"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#isAbstractOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.bibliography.com/ontologies/biblio.owl#isAbstractOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Abstract"/>
+        <rdfs:range rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Article"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#isAffiliationOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.bibliography.com/ontologies/biblio.owl#isAffiliationOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Institution"/>
+        <rdfs:range rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Author"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#isArticleOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.bibliography.com/ontologies/biblio.owl#isArticleOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Article"/>
+        <rdfs:range rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Volume"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#isAuthorOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.bibliography.com/ontologies/biblio.owl#isAuthorOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Author"/>
+        <rdfs:range rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Article"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#isDoiOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.bibliography.com/ontologies/biblio.owl#isDoiOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#DOI"/>
+        <rdfs:range rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Article"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#isIssnOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.bibliography.com/ontologies/biblio.owl#isIssnOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#ISSN"/>
+        <rdfs:range rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Journal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#isKeywordOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.bibliography.com/ontologies/biblio.owl#isKeywordOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Keyword"/>
+        <rdfs:range rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Abstract"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#isPublisherOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.bibliography.com/ontologies/biblio.owl#isPublisherOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#Publisher"/>
+        <rdfs:range rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Journal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#isUrlOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.bibliography.com/ontologies/biblio.owl#isUrlOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#URL"/>
+        <rdfs:range rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Article"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#isVolumeOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.bibliography.com/ontologies/biblio.owl#isVolumeOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Volume"/>
+        <rdfs:range rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Journal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#isYearOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.bibliography.com/ontologies/biblio.owl#isYearOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Year"/>
+        <rdfs:range rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Volume"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#hasAbstractText -->
+
+    <owl:DatatypeProperty rdf:about="http://www.bibliography.com/ontologies/biblio.owl#hasAbstractText">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Abstract"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#hasArticlePages -->
+
+    <owl:DatatypeProperty rdf:about="http://www.bibliography.com/ontologies/biblio.owl#hasArticlePages">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Article"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#hasArticleTitle -->
+
+    <owl:DatatypeProperty rdf:about="http://www.bibliography.com/ontologies/biblio.owl#hasArticleTitle">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Article"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#hasAuthorName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.bibliography.com/ontologies/biblio.owl#hasAuthorName">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Author"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#hasDoiString -->
+
+    <owl:DatatypeProperty rdf:about="http://www.bibliography.com/ontologies/biblio.owl#hasDoiString">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#DOI"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#hasInstitutionName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.bibliography.com/ontologies/biblio.owl#hasInstitutionName">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Institution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#hasIssnNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.bibliography.com/ontologies/biblio.owl#hasIssnNumber">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#ISSN"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#hasJournalName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.bibliography.com/ontologies/biblio.owl#hasJournalName">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Journal"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#hasKeywordName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.bibliography.com/ontologies/biblio.owl#hasKeywordName">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Keyword"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#hasPublisherName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.bibliography.com/ontologies/biblio.owl#hasPublisherName">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#Publisher"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#hasUrlString -->
+
+    <owl:DatatypeProperty rdf:about="http://www.bibliography.com/ontologies/biblio.owl#hasUrlString">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#URL"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#hasVolumeNote -->
+
+    <owl:DatatypeProperty rdf:about="http://www.bibliography.com/ontologies/biblio.owl#hasVolumeNote">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Volume"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#hasVolumeString -->
+
+    <owl:DatatypeProperty rdf:about="http://www.bibliography.com/ontologies/biblio.owl#hasVolumeString">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Volume"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#hasYearNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.bibliography.com/ontologies/biblio.owl#hasYearNumber">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Year"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#Organization -->
+
+    <owl:Class rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Organization"/>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#Person -->
+
+    <owl:Class rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Person"/>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#Publication -->
+
+    <owl:Class rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Publication"/>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#Publisher -->
+
+    <owl:Class rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Publisher">
+        <rdfs:subClassOf rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#Organization"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#isPublisherOf"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Journal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#hasPublisherName"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Institution"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#Works -->
+
+    <owl:Class rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Works"/>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl/#Abstract -->
+
+    <owl:Class rdf:about="http://www.bibliography.com/ontologies/biblio.owl/#Abstract">
+        <rdfs:subClassOf rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#Works"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#hasKeywords"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Keyword"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#isAbstractOf"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Article"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#hasAbstractText"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl/#Article -->
+
+    <owl:Class rdf:about="http://www.bibliography.com/ontologies/biblio.owl/#Article">
+        <rdfs:subClassOf rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#Works"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#hasAuthor"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Author"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#hasAbstract"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Abstract"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#hasDoi"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#DOI"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#hasUrl"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#URL"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#isArticleOf"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Volume"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#hasArticlePages"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#hasArticleTitle"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl/#Author -->
+
+    <owl:Class rdf:about="http://www.bibliography.com/ontologies/biblio.owl/#Author">
+        <rdfs:subClassOf rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#Person"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#isAuthorOf"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Article"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#hasAffiliation"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Institution"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#hasAuthorName"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl/#DOI -->
+
+    <owl:Class rdf:about="http://www.bibliography.com/ontologies/biblio.owl/#DOI">
+        <rdfs:subClassOf rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#Works"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#isDoiOf"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Article"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#hasDoiString"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl/#ISSN -->
+
+    <owl:Class rdf:about="http://www.bibliography.com/ontologies/biblio.owl/#ISSN">
+        <rdfs:subClassOf rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#Publication"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#isIssnOf"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Journal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#hasIssnNumber"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl/#Institution -->
+
+    <owl:Class rdf:about="http://www.bibliography.com/ontologies/biblio.owl/#Institution">
+        <rdfs:subClassOf rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#Organization"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#isAffiliationOf"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Author"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#hasInstitutionName"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl/#Journal -->
+
+    <owl:Class rdf:about="http://www.bibliography.com/ontologies/biblio.owl/#Journal">
+        <rdfs:subClassOf rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#Publication"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#hasVolume"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Volume"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#hasIssn"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#ISSN"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#hasPublisher"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#Publisher"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#hasJournalName"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl/#Keyword -->
+
+    <owl:Class rdf:about="http://www.bibliography.com/ontologies/biblio.owl/#Keyword">
+        <rdfs:subClassOf rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#Works"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#isKeywordOf"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Abstract"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#hasKeywordName"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl/#URL -->
+
+    <owl:Class rdf:about="http://www.bibliography.com/ontologies/biblio.owl/#URL">
+        <rdfs:subClassOf rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#Works"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#isUrlOf"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Article"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#hasUrlString"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl/#Volume -->
+
+    <owl:Class rdf:about="http://www.bibliography.com/ontologies/biblio.owl/#Volume">
+        <rdfs:subClassOf rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#Publication"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#hasArticle"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Article"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#isVolumeOf"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Journal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#hasYear"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Year"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#hasVolumeNote"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#hasVolumeString"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl/#Year -->
+
+    <owl:Class rdf:about="http://www.bibliography.com/ontologies/biblio.owl/#Year">
+        <rdfs:subClassOf rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#Publication"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#isYearOf"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Volume"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#hasYearNumber"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#Abstract-McCrae201623 -->
+
+    <owl:NamedIndividual rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Abstract-McCrae201623">
+        <rdf:type rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Abstract"/>
+        <hasKeywords rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#Key-DomainAdaptation"/>
+        <hasKeywords rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#Key-OntologyLocalization"/>
+        <hasKeywords rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#Key-StatisticalMachineTranslation"/>
+        <hasAbstractText>Ontology localization is the task of adapting an ontology to a different cultural context, and has been identified as an important task in the context of the Multilingual Semantic Web vision. The key task in ontology localization is translating the lexical layer of an ontology, i.e., its labels, into some foreign language. For this task, we hypothesize that the translation quality can be improved by adapting a machine translation system to the domain of the ontology. To this end, we build on the success of existing statistical machine translation (SMT) approaches, and investigate the impact of different domain adaptation techniques on the task. In particular, we investigate three techniques: (i) enriching a phrase table by domain-specific translation candidates acquired from existing Web resources, (ii) relying on Explicit Semantic Analysis as an additional technique for scoring a certain translation of a given source phrase, as well as (iii) adaptation of the language model by means of weighting n-grams with scores obtained from topic modelling. We present in detail the impact of each of these three techniques on the task of translating ontology labels. We show that these techniques have a generally positive effect on the quality of translation of the ontology and that, in combination, they provide a significant improvement in quality.</hasAbstractText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#Abstract-Ristoski20161 -->
+
+    <owl:NamedIndividual rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Abstract-Ristoski20161">
+        <rdf:type rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Abstract"/>
+        <hasKeywords rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#Key-DataMining"/>
+        <hasKeywords rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#Key-KnowledgeDiscovery"/>
+        <hasKeywords rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#Key-LinkedOpenData"/>
+        <hasKeywords rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#Key-SemanticWeb"/>
+        <hasAbstractText>Data Mining and Knowledge Discovery in Databases (KDD) is a research field concerned with deriving higher-level insights from data. The tasks performed in that field are knowledge intensive and can often benefit from using additional knowledge from various sources. Therefore, many approaches have been proposed in this area that combine Semantic Web data with the data mining and knowledge discovery process. This survey article gives a comprehensive overview of those approaches in different stages of the knowledge discovery process. As an example, we show how Linked Open Data can be used at various stages for building content-based recommender systems. The survey shows that, while there are numerous interesting research works performed, the full potential of the Semantic Web and Linked Open Data for data mining and KDD is still to be unlocked.</hasAbstractText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#Abstract-Sah201632 -->
+
+    <owl:NamedIndividual rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Abstract-Sah201632">
+        <rdf:type rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Abstract"/>
+        <hasKeywords rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#Key-Categorization"/>
+        <hasKeywords rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#Key-ConceptBasedSearch"/>
+        <hasKeywords rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#Key-FuzzyRetrievalModel"/>
+        <hasKeywords rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#Key-LinkedOpenData"/>
+        <hasKeywords rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#Key-PersonalizedSearchExploration"/>
+        <hasKeywords rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#Key-UMBEL"/>
+        <hasAbstractText>In this paper, we present a novel personalized concept-based search mechanism for the Web of Data based on results categorization. The innovation of the paper comes from combining novel categorization and personalization techniques, and using categorization for providing personalization. In our approach, search results (Linked Open Data resources) are dynamically categorized into Upper Mapping and Binding Exchange Layer (UMBEL) concepts using a novel fuzzy retrieval model. Then, results with the same concepts are grouped together to form categories, which we call conceptlenses. Such categorization enables concept-based browsing of the retrieved results aligned to users’ intent or interests. When the user selects a concept lens for exploration, results are immediately personalized. In particular, all concept lenses are personally re-organized according to their similarity to the selected lens. Within the selected concept lens; more relevant results are included using results re-ranking and query expansion, as well as relevant concept lenses are suggested to support results exploration. This allows dynamic adaptation of results to the user’s local choices. We also support interactive personalization; when the user clicks on a result, within the interacted lens, relevant lenses and results are included using results re-ranking and query expansion. Extensive evaluations were performed to assess our approach: (i) Performance of our fuzzy-based categorization approach was evaluated on a particular benchmark (~10,000 mappings). The evaluations showed that we can achieve highly acceptable categorization accuracy and perform better than the vector space model. (ii) Personalized search efficacy was assessed using a user study with 32 participants in a tourist domain. The results revealed that our approach performed significantly better than a non-adaptive baseline search. (iii) Dynamic personalization performance was evaluated, which illustrated that our personalization approach is scalable. (iv) Finally, we compared our system with the existing LOD search engines, which showed that our approach is unique.</hasAbstractText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#Abstract-VanWoensel201658 -->
+
+    <owl:NamedIndividual rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Abstract-VanWoensel201658">
+        <rdf:type rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Abstract"/>
+        <hasKeywords rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#Key-CacheReplacement"/>
+        <hasKeywords rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#Key-DataCaching"/>
+        <hasKeywords rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#Key-DataIndexing"/>
+        <hasKeywords rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#Key-DataIntegration"/>
+        <hasKeywords rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#Key-MobileComputing"/>
+        <hasKeywords rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#Key-OpenWorldAssumption"/>
+        <hasAbstractText>From the Semantic Web’s inception, a number of concurrent initiatives have given rise to multiple segments: large semantic datasets, exposed by query endpoints; online Semantic Web documents, in the form of RDF files; and semantically annotated web content (e.g., using RDFa), semantic sources in their own right. In various mobile application scenarios, online semantic data has proven to be useful. While query endpoints are most commonly exploited, they are mainly useful to expose large semantic datasets. Alternatively, mobile RDF stores are utilized to query local semantic data, but this requires the design-time identification and replication of relevant data. Instead, we present a mobile query service that supports on-the-fly and integrated querying of semantic data, originating from a largely unused portion of the Semantic Web, comprising online RDF files and semantics embedded in annotated webpages. To that end, our solution performs dynamic identification, retrieval and caching of query-relevant semantic data. We explore several data identification and caching alternatives, and investigate the utility of source metadata in optimizing these tasks. Further, we introduce a novel cache replacement strategy, fine-tuned to the described query dataset, and include explicit support for the Open World Assumption. An extensive experimental validation evaluates the query service and its alternative components.</hasAbstractText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#Article-McCrae201623 -->
+
+    <owl:NamedIndividual rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Article-McCrae201623">
+        <rdf:type rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Article"/>
+        <hasAbstract rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#Abstract-McCrae201623"/>
+        <hasAuthor rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#Author-Arcan,M."/>
+        <hasAuthor rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#Author-Asooja,K."/>
+        <hasAuthor rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#Author-Buitelaar,P."/>
+        <hasAuthor rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#Author-Cimiano,P."/>
+        <hasAuthor rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#Author-Gracia,J."/>
+        <hasAuthor rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#Author-McCrae,J.P."/>
+        <hasDoi rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#DOI-McCrae201623"/>
+        <hasUrl rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#URL-McCrae201623"/>
+        <hasArticlePages>23-31</hasArticlePages>
+        <hasArticleTitle>Domain adaptation for ontology localization</hasArticleTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#Article-Ristoski20161 -->
+
+    <owl:NamedIndividual rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Article-Ristoski20161">
+        <rdf:type rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Article"/>
+        <hasAbstract rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#Abstract-Ristoski20161"/>
+        <hasAuthor rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#Author-Paulheim,H."/>
+        <hasAuthor rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#Author-Ristoski,P."/>
+        <hasDoi rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#DOI-Ristoski20161"/>
+        <hasUrl rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#URL-Ristoski20161"/>
+        <hasArticlePages>1-22</hasArticlePages>
+        <hasArticleTitle>Semantic Web in data mining and knowledge discovery: A comprehensive survey</hasArticleTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#Article-Sah201632 -->
+
+    <owl:NamedIndividual rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Article-Sah201632">
+        <rdf:type rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Article"/>
+        <hasAbstract rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#Abstract-Sah201632"/>
+        <hasAuthor rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#Author-Sah,M."/>
+        <hasAuthor rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#Author-Wade,V."/>
+        <hasDoi rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#DOI-Sah201632"/>
+        <hasUrl rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#URL-Sah201632"/>
+        <hasArticlePages>32-57</hasArticlePages>
+        <hasArticleTitle>Personalized concept-based search on the Linked Open Data</hasArticleTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#Article-VanWoensel201658 -->
+
+    <owl:NamedIndividual rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Article-VanWoensel201658">
+        <rdf:type rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Article"/>
+        <hasAbstract rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#Abstract-VanWoensel201658"/>
+        <hasAuthor rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#Author-Casteleyn,S."/>
+        <hasAuthor rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#Author-Woensel,W.V."/>
+        <hasDoi rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#DOI-VanWoensel201658"/>
+        <hasUrl rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#URL-VanWoensel201658"/>
+        <hasArticlePages>58-76</hasArticlePages>
+        <hasArticleTitle>A mobile query service for integrated access to large numbers of online semantic web data sources</hasArticleTitle>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#DOI-McCrae201623 -->
+
+    <owl:NamedIndividual rdf:about="http://www.bibliography.com/ontologies/biblio.owl#DOI-McCrae201623">
+        <rdf:type rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#DOI"/>
+        <hasDoiString>http://dx.doi.org/10.1016/j.websem.2015.12.001</hasDoiString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#DOI-Ristoski20161 -->
+
+    <owl:NamedIndividual rdf:about="http://www.bibliography.com/ontologies/biblio.owl#DOI-Ristoski20161">
+        <rdf:type rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#DOI"/>
+        <hasDoiString>http://dx.doi.org/10.1016/j.websem.2016.01.001</hasDoiString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#DOI-Sah201632 -->
+
+    <owl:NamedIndividual rdf:about="http://www.bibliography.com/ontologies/biblio.owl#DOI-Sah201632">
+        <rdf:type rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#DOI"/>
+        <hasDoiString>http://dx.doi.org/10.1016/j.websem.2015.11.004</hasDoiString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#DOI-VanWoensel201658 -->
+
+    <owl:NamedIndividual rdf:about="http://www.bibliography.com/ontologies/biblio.owl#DOI-VanWoensel201658">
+        <rdf:type rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#DOI"/>
+        <hasDoiString>http://dx.doi.org/10.1016/j.websem.2015.10.002</hasDoiString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#ISSN-15708268 -->
+
+    <owl:NamedIndividual rdf:about="http://www.bibliography.com/ontologies/biblio.owl#ISSN-15708268">
+        <rdf:type rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#ISSN"/>
+        <hasIssnNumber>1570-8268</hasIssnNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#Inst-DalhousieUnv -->
+
+    <owl:NamedIndividual rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Inst-DalhousieUnv">
+        <rdf:type rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Institution"/>
+        <hasInstitutionName>Dalhousie University</hasInstitutionName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#Inst-NationalUnvIreland -->
+
+    <owl:NamedIndividual rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Inst-NationalUnvIreland">
+        <rdf:type rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Institution"/>
+        <hasInstitutionName>National University of Ireland</hasInstitutionName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#Inst-NearEastUnv -->
+
+    <owl:NamedIndividual rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Inst-NearEastUnv">
+        <rdf:type rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Institution"/>
+        <hasInstitutionName>Near East University</hasInstitutionName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#Inst-TrinityCollegeDublin -->
+
+    <owl:NamedIndividual rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Inst-TrinityCollegeDublin">
+        <rdf:type rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Institution"/>
+        <hasInstitutionName>Trinity College Dublin</hasInstitutionName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#Inst-UnvBielefeld -->
+
+    <owl:NamedIndividual rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Inst-UnvBielefeld">
+        <rdf:type rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Institution"/>
+        <hasInstitutionName>University of Bielefeld</hasInstitutionName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#Inst-UnvJaime -->
+
+    <owl:NamedIndividual rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Inst-UnvJaime">
+        <rdf:type rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Institution"/>
+        <hasInstitutionName>Universidad Jaime I</hasInstitutionName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#Inst-UnvMannheim -->
+
+    <owl:NamedIndividual rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Inst-UnvMannheim">
+        <rdf:type rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Institution"/>
+        <hasInstitutionName>University of Mannheim</hasInstitutionName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#Inst-UnvPolitecnicaMadrid -->
+
+    <owl:NamedIndividual rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Inst-UnvPolitecnicaMadrid">
+        <rdf:type rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Institution"/>
+        <hasInstitutionName>Universidad Politecnica de Madrid</hasInstitutionName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#Journal-WebSem -->
+
+    <owl:NamedIndividual rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Journal-WebSem">
+        <rdf:type rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Journal"/>
+        <hasIssn rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#ISSN-15708268"/>
+        <hasPublisher rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#Pub-Elsevier"/>
+        <hasVolume rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#Vol36-WebSem"/>
+        <hasJournalName>Journal of Web Semantics</hasJournalName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#Key-CacheReplacement -->
+
+    <owl:NamedIndividual rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Key-CacheReplacement">
+        <rdf:type rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Keyword"/>
+        <hasKeywordName>Cache replacement</hasKeywordName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#Key-Categorization -->
+
+    <owl:NamedIndividual rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Key-Categorization">
+        <rdf:type rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Keyword"/>
+        <hasKeywordName>Categorization</hasKeywordName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#Key-ConceptBasedSearch -->
+
+    <owl:NamedIndividual rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Key-ConceptBasedSearch">
+        <rdf:type rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Keyword"/>
+        <hasKeywordName>Concept-based search</hasKeywordName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#Key-DataCaching -->
+
+    <owl:NamedIndividual rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Key-DataCaching">
+        <rdf:type rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Keyword"/>
+        <hasKeywordName>Data caching</hasKeywordName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#Key-DataIndexing -->
+
+    <owl:NamedIndividual rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Key-DataIndexing">
+        <rdf:type rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Keyword"/>
+        <hasKeywordName>Data indexing</hasKeywordName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#Key-DataIntegration -->
+
+    <owl:NamedIndividual rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Key-DataIntegration">
+        <rdf:type rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Keyword"/>
+        <hasKeywordName>Data integration</hasKeywordName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#Key-DataMining -->
+
+    <owl:NamedIndividual rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Key-DataMining">
+        <rdf:type rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Keyword"/>
+        <hasKeywordName>Data Mining</hasKeywordName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#Key-DomainAdaptation -->
+
+    <owl:NamedIndividual rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Key-DomainAdaptation">
+        <rdf:type rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Keyword"/>
+        <hasKeywordName>Domain adaptation</hasKeywordName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#Key-FuzzyRetrievalModel -->
+
+    <owl:NamedIndividual rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Key-FuzzyRetrievalModel">
+        <rdf:type rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Keyword"/>
+        <hasKeywordName>Fuzzy retrieval model</hasKeywordName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#Key-KnowledgeDiscovery -->
+
+    <owl:NamedIndividual rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Key-KnowledgeDiscovery">
+        <rdf:type rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Keyword"/>
+        <hasKeywordName>Knowledge Discovery</hasKeywordName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#Key-LinkedOpenData -->
+
+    <owl:NamedIndividual rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Key-LinkedOpenData">
+        <rdf:type rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Keyword"/>
+        <hasKeywordName>Linked Open Data</hasKeywordName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#Key-MobileComputing -->
+
+    <owl:NamedIndividual rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Key-MobileComputing">
+        <rdf:type rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Keyword"/>
+        <hasKeywordName>Mobile computing</hasKeywordName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#Key-OntologyLocalization -->
+
+    <owl:NamedIndividual rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Key-OntologyLocalization">
+        <rdf:type rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Keyword"/>
+        <hasKeywordName>Ontology localization</hasKeywordName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#Key-OpenWorldAssumption -->
+
+    <owl:NamedIndividual rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Key-OpenWorldAssumption">
+        <rdf:type rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Keyword"/>
+        <hasKeywordName>Open world assumption</hasKeywordName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#Key-PersonalizedSearchExploration -->
+
+    <owl:NamedIndividual rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Key-PersonalizedSearchExploration">
+        <rdf:type rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Keyword"/>
+        <hasKeywordName>Personalized search/exploration</hasKeywordName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#Key-SemanticWeb -->
+
+    <owl:NamedIndividual rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Key-SemanticWeb">
+        <rdf:type rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Keyword"/>
+        <hasKeywordName>Semantic Web</hasKeywordName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#Key-StatisticalMachineTranslation -->
+
+    <owl:NamedIndividual rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Key-StatisticalMachineTranslation">
+        <rdf:type rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Keyword"/>
+        <hasKeywordName>Statistical machine translation</hasKeywordName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#Key-UMBEL -->
+
+    <owl:NamedIndividual rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Key-UMBEL">
+        <rdf:type rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Keyword"/>
+        <hasKeywordName>UMBEL</hasKeywordName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#Pub-Elsevier -->
+
+    <owl:NamedIndividual rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Pub-Elsevier">
+        <rdf:type rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#Publisher"/>
+        <hasPublisherName>Elsevier</hasPublisherName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#URL-McCrae201623 -->
+
+    <owl:NamedIndividual rdf:about="http://www.bibliography.com/ontologies/biblio.owl#URL-McCrae201623">
+        <rdf:type rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#URL"/>
+        <hasUrlString>http://www.sciencedirect.com/science/article/pii/S1570826815001420</hasUrlString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#URL-Ristoski20161 -->
+
+    <owl:NamedIndividual rdf:about="http://www.bibliography.com/ontologies/biblio.owl#URL-Ristoski20161">
+        <rdf:type rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#URL"/>
+        <hasUrlString>http://www.sciencedirect.com/science/article/pii/S1570826816000020</hasUrlString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#URL-Sah201632 -->
+
+    <owl:NamedIndividual rdf:about="http://www.bibliography.com/ontologies/biblio.owl#URL-Sah201632">
+        <rdf:type rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#URL"/>
+        <hasUrlString>http://www.sciencedirect.com/science/article/pii/S1570826815001419</hasUrlString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#URL-VanWoensel201658 -->
+
+    <owl:NamedIndividual rdf:about="http://www.bibliography.com/ontologies/biblio.owl#URL-VanWoensel201658">
+        <rdf:type rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#URL"/>
+        <hasUrlString>http://www.sciencedirect.com/science/article/pii/S1570826815000876</hasUrlString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#Vol36-WebSem -->
+
+    <owl:NamedIndividual rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Vol36-WebSem">
+        <rdf:type rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Volume"/>
+        <hasArticle rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#Article-McCrae201623"/>
+        <hasArticle rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#Article-Ristoski20161"/>
+        <hasArticle rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#Article-Sah201632"/>
+        <hasArticle rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#Article-VanWoensel201658"/>
+        <hasYear rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#Year-2016"/>
+        <hasVolumeNote>n/a</hasVolumeNote>
+        <hasVolumeString>Volume 36</hasVolumeString>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#Year-2016 -->
+
+    <owl:NamedIndividual rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Year-2016">
+        <rdf:type rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Year"/>
+        <hasYearNumber>2016</hasYearNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#Author-Arcan,M. -->
+
+    <owl:NamedIndividual rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Author-Arcan,M.">
+        <rdf:type rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Author"/>
+        <hasAffiliation rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#Inst-NationalUnvIreland"/>
+        <hasAuthorName>Mihael Arcan</hasAuthorName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#Author-Asooja,K. -->
+
+    <owl:NamedIndividual rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Author-Asooja,K.">
+        <rdf:type rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Author"/>
+        <hasAffiliation rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#Inst-NationalUnvIreland"/>
+        <hasAuthorName>Kartik Asooja</hasAuthorName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#Author-Buitelaar,P. -->
+
+    <owl:NamedIndividual rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Author-Buitelaar,P.">
+        <rdf:type rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Author"/>
+        <hasAffiliation rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#Inst-NationalUnvIreland"/>
+        <hasAuthorName>Paul Buitelaar</hasAuthorName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#Author-Casteleyn,S. -->
+
+    <owl:NamedIndividual rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Author-Casteleyn,S.">
+        <rdf:type rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Author"/>
+        <hasAffiliation rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#Inst-UnvJaime"/>
+        <hasAuthorName>Sven Casteleyn</hasAuthorName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#Author-Cimiano,P. -->
+
+    <owl:NamedIndividual rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Author-Cimiano,P.">
+        <rdf:type rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Author"/>
+        <hasAffiliation rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#Inst-UnvBielefeld"/>
+        <hasAuthorName>Philipp Cimiano</hasAuthorName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#Author-Gracia,J. -->
+
+    <owl:NamedIndividual rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Author-Gracia,J.">
+        <rdf:type rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Author"/>
+        <hasAffiliation rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#Inst-UnvPolitecnicaMadrid"/>
+        <hasAuthorName>Jorge Gracia</hasAuthorName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#Author-McCrae,J.P. -->
+
+    <owl:NamedIndividual rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Author-McCrae,J.P.">
+        <rdf:type rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Author"/>
+        <hasAffiliation rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#Inst-NationalUnvIreland"/>
+        <hasAuthorName>John P. McCrae</hasAuthorName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#Author-Paulheim,H. -->
+
+    <owl:NamedIndividual rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Author-Paulheim,H.">
+        <rdf:type rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Author"/>
+        <hasAffiliation rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#Inst-UnvMannheim"/>
+        <hasAuthorName>Heiko Paulheim</hasAuthorName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#Author-Ristoski,P. -->
+
+    <owl:NamedIndividual rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Author-Ristoski,P.">
+        <rdf:type rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Author"/>
+        <hasAffiliation rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#Inst-UnvMannheim"/>
+        <hasAuthorName>Petar Ristoski</hasAuthorName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#Author-Sah,M. -->
+
+    <owl:NamedIndividual rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Author-Sah,M.">
+        <rdf:type rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Author"/>
+        <hasAffiliation rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#Inst-NearEastUnv"/>
+        <hasAuthorName>Melike Sah</hasAuthorName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#Author-Wade,V. -->
+
+    <owl:NamedIndividual rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Author-Wade,V.">
+        <rdf:type rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Author"/>
+        <hasAffiliation rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#Inst-TrinityCollegeDublin"/>
+        <hasAuthorName>Vincent Wade</hasAuthorName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.bibliography.com/ontologies/biblio.owl#Author-Woensel,W.V. -->
+
+    <owl:NamedIndividual rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Author-Woensel,W.V.">
+        <rdf:type rdf:resource="http://www.bibliography.com/ontologies/biblio.owl/#Author"/>
+        <hasAffiliation rdf:resource="http://www.bibliography.com/ontologies/biblio.owl#Inst-DalhousieUnv"/>
+        <hasAuthorName>William Van Woensel</hasAuthorName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Organization"/>
+            <rdf:Description rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Person"/>
+            <rdf:Description rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Publication"/>
+            <rdf:Description rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Works"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.bibliography.com/ontologies/biblio.owl/#Abstract"/>
+            <rdf:Description rdf:about="http://www.bibliography.com/ontologies/biblio.owl/#Article"/>
+            <rdf:Description rdf:about="http://www.bibliography.com/ontologies/biblio.owl/#DOI"/>
+            <rdf:Description rdf:about="http://www.bibliography.com/ontologies/biblio.owl/#Keyword"/>
+            <rdf:Description rdf:about="http://www.bibliography.com/ontologies/biblio.owl/#URL"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.bibliography.com/ontologies/biblio.owl/#ISSN"/>
+            <rdf:Description rdf:about="http://www.bibliography.com/ontologies/biblio.owl/#Journal"/>
+            <rdf:Description rdf:about="http://www.bibliography.com/ontologies/biblio.owl/#Volume"/>
+            <rdf:Description rdf:about="http://www.bibliography.com/ontologies/biblio.owl/#Year"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Abstract-McCrae201623"/>
+            <rdf:Description rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Abstract-Ristoski20161"/>
+            <rdf:Description rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Abstract-Sah201632"/>
+            <rdf:Description rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Abstract-VanWoensel201658"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Article-McCrae201623"/>
+            <rdf:Description rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Article-Ristoski20161"/>
+            <rdf:Description rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Article-Sah201632"/>
+            <rdf:Description rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Article-VanWoensel201658"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.bibliography.com/ontologies/biblio.owl#DOI-McCrae201623"/>
+            <rdf:Description rdf:about="http://www.bibliography.com/ontologies/biblio.owl#DOI-Ristoski20161"/>
+            <rdf:Description rdf:about="http://www.bibliography.com/ontologies/biblio.owl#DOI-Sah201632"/>
+            <rdf:Description rdf:about="http://www.bibliography.com/ontologies/biblio.owl#DOI-VanWoensel201658"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Inst-DalhousieUnv"/>
+            <rdf:Description rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Inst-NationalUnvIreland"/>
+            <rdf:Description rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Inst-NearEastUnv"/>
+            <rdf:Description rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Inst-TrinityCollegeDublin"/>
+            <rdf:Description rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Inst-UnvBielefeld"/>
+            <rdf:Description rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Inst-UnvJaime"/>
+            <rdf:Description rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Inst-UnvMannheim"/>
+            <rdf:Description rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Inst-UnvPolitecnicaMadrid"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Key-CacheReplacement"/>
+            <rdf:Description rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Key-Categorization"/>
+            <rdf:Description rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Key-ConceptBasedSearch"/>
+            <rdf:Description rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Key-DataCaching"/>
+            <rdf:Description rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Key-DataIndexing"/>
+            <rdf:Description rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Key-DataIntegration"/>
+            <rdf:Description rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Key-DataMining"/>
+            <rdf:Description rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Key-DomainAdaptation"/>
+            <rdf:Description rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Key-FuzzyRetrievalModel"/>
+            <rdf:Description rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Key-KnowledgeDiscovery"/>
+            <rdf:Description rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Key-LinkedOpenData"/>
+            <rdf:Description rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Key-MobileComputing"/>
+            <rdf:Description rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Key-OntologyLocalization"/>
+            <rdf:Description rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Key-OpenWorldAssumption"/>
+            <rdf:Description rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Key-PersonalizedSearchExploration"/>
+            <rdf:Description rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Key-SemanticWeb"/>
+            <rdf:Description rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Key-StatisticalMachineTranslation"/>
+            <rdf:Description rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Key-UMBEL"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.bibliography.com/ontologies/biblio.owl#URL-McCrae201623"/>
+            <rdf:Description rdf:about="http://www.bibliography.com/ontologies/biblio.owl#URL-Ristoski20161"/>
+            <rdf:Description rdf:about="http://www.bibliography.com/ontologies/biblio.owl#URL-Sah201632"/>
+            <rdf:Description rdf:about="http://www.bibliography.com/ontologies/biblio.owl#URL-VanWoensel201658"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Author-Arcan,M."/>
+            <rdf:Description rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Author-Asooja,K."/>
+            <rdf:Description rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Author-Buitelaar,P."/>
+            <rdf:Description rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Author-Casteleyn,S."/>
+            <rdf:Description rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Author-Cimiano,P."/>
+            <rdf:Description rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Author-Gracia,J."/>
+            <rdf:Description rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Author-McCrae,J.P."/>
+            <rdf:Description rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Author-Paulheim,H."/>
+            <rdf:Description rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Author-Ristoski,P."/>
+            <rdf:Description rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Author-Sah,M."/>
+            <rdf:Description rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Author-Wade,V."/>
+            <rdf:Description rdf:about="http://www.bibliography.com/ontologies/biblio.owl#Author-Woensel,W.V."/>
+        </owl:distinctMembers>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi -->
+
